@@ -1,0 +1,354 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  main body styling. */
+body {
+  font-family: 'Roboto', sans-serif;  
+}
+/* header styling */
+.header {
+  /*background-color: red;*/
+  width: 100vw;
+  box-sizing: border-box;
+}
+.header .cartMain {
+  position: fixed;
+  top: 0%;
+  left: 93.8%;
+  font-size: 60px;
+  background: rgba(0,0,0,1);
+  padding: 5px;
+  color: rgba(255,255,255,1);
+}
+.cartMain button {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  font-size: 14px;
+  background-color: #eabf00;
+  height: 25px;
+  width: 25px;
+  padding: 0 1px 0 0;
+  border-radius: 50%;
+}
+/*  Cart styling. */
+.cart {
+  position: fixed;
+  width: 40vw;
+  height: 100vh;
+  z-index: 2;
+  top: 0;
+  left: 60%;
+  background-color: #1b1a20;
+  box-sizing: border-box;
+  /*padding: 0 10px;*/
+  overflow: scroll;
+}
+.closeCart {
+  font-size: 20px;
+  /*background: rgba(0,0,0,1);*/
+  padding: 12px;
+  color: rgba(255,255,255,0.8);
+  /*transform: translate(-30px);*/
+  /*width: 1000px;*/
+}
+.cart i {
+  color: rgba(255,255,255,1);
+  font-size: 60px;
+}
+.cartClose {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  color: white;
+}
+.cartClose span {
+  padding-left: 10px;
+  font-size: 25px;
+  color: rgba(255,255,255,0.5);
+}
+
+.breakLine {
+  color: red;
+  border: 1px solid rgba(255,255,255,0.3);
+  width: 100%;
+  border-radius: 100%;
+  margin: 10px auto;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.1)
+}
+
+.itemsContainer {
+  position: relative;
+  box-sizing: border-box;
+  padding: 25px 20px;
+}
+.addedItem {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto 1fr auto;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 10px;
+  /*place-items: center;*/
+  text-align: left;
+}
+.addedItem p, .selectedTshirts p {
+  font-size: 20px;
+  word-break: break-all;
+  color: rgba(255,255,255,0.7);
+}
+.selectedTshirts {
+  padding-bottom: 180px;
+}
+.defaultMessage {
+  margin-top: 50px;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+}
+.addedItem span {
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+}
+h5 {
+  color: white;
+  font-size: 20px;
+}
+.removeItem {
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+  top: 0%;
+  left: 92%;
+  cursor: pointer;
+}
+
+.cartTotal {
+  width: 40vw;
+  /*height: 40vh;*/
+  position: fixed;
+  top: 70%;
+  /*left: 10%;*/
+  /*box-shadow: 0px 0px 5px 5px rgba(0,0,0,1);*/
+}
+.countBtn {
+  transform: translate(-180%,-50%);
+}
+.subtotal {
+  /*margin-top: 10px;*/
+  box-sizing: border-box;
+  grid-gap: 100px;
+  padding: 20px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  /*background: rgba(0,0,0,1);*/
+  background: #1b1a20;
+  color: white;
+  height: 30vh;
+  box-shadow: 20px 0 15px 5px rgba(0,0,0,1);
+}
+.subtotal h2{
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.subtotal span  {
+  color: yellow;
+  font-size: 20px;
+}
+.checkout {
+  display: block;
+  transform: translate(0, -120px);
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: white;
+  padding: 14px 30%;
+  background-color: rgba(0,0,0,1);
+  border: 1px solid transparent;
+}
+/* body styling */
+img {
+  width: 220px;
+  margin-bottom: 20px;
+}
+.mainWrapper {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.lengthCount {
+  font-size: 14px;
+  color: rgba(0,0,0,0.9);
+  margin-bottom: 20px;
+}
+ul {
+  margin-top: 10px;
+  width: 180px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  text-align: center;
+  padding: 5px;
+}
+
+h1 {
+  width: 160px;
+  height: 30px;
+  margin: 0 auto;
+}
+.sizes {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 10px;
+  height: 40px;
+  width: 40px;
+  background: rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+
+}
+button:focus {
+  outline: none;
+}
+
+.sizesWrapper {
+  width: 200px;
+  margin-left: 30px;
+}
+
+.imagesWapper {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid transparent;
+  text-align: center;  
+  justify-items: center;
+
+}
+
+.productDescription {
+  position: relative;
+  border: 1px solid transparent;
+  padding: 10px;
+}
+
+.freeShip {
+  position: absolute;
+  font-size: 10px;
+  background: rgba(0,0,0,1);
+  color: white;
+  left: 69%;
+  line-height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.productDescription:hover, .addToCart:hover  {
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.border {
+  width: 30px;
+  border: 1px solid rgb(234, 191, 0);
+  margin: 10px auto;
+}
+
+.imageSort {
+  display: flex;
+  justify-content:  space-between;
+}
+
+.active {
+  background-color: rgba(0,0,0,1);
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 10px;
+  height: 40px;
+  width: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Form styling*/
+label {
+  font-size: 20px;
+  padding: 10px;
+}
+
+select {
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 18px;
+}
+select:focus {
+  outline: none;
+}
+
+.dropDown {
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  padding: 8px 0px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.addToCart {
+  padding: 10px 50px;
+  font-size: 20px;
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+}
+
+
+
+
+
+
+
+
+
+
